@@ -1,0 +1,66 @@
+{
+  "name": "pipes2api",
+  "version": "0.0.1",
+  "description": "Compile Yahoo! Pipes to Javascript, put them on Lambda, and set up an API gateway.",
+  "author": {
+    "name": "Rich Jones",
+    "email": "miserlou@gmail.com"
+  },
+  "preferGlobal": "false",
+  "main": "index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/neyric/pipes2js.git"
+  },
+  "bin": {
+    "pipes2js": "./cli/pipes2js.js"
+  },
+  "dependencies": {
+    "async": "0.1.22",
+    "xml2js-expat": "0.2.2",
+    "request": "2.11.4",
+    "htmlparser": "1.7.6",
+    "strftime": "0.4.7",
+    "jsdom": "0.2.19"
+  },
+  "devDependencies": {
+    "vows": "0.6.4"
+  },
+  "scripts": {
+    "test": "vows --spec modules/*/test.js tests/*"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/neyric/pipes2js/master/LICENSE.txt"
+    }
+  ],
+  "gitHead": "596bb2d7d2aed24c010be51499687b67c3ea75c2",
+  "bugs": {
+    "url": "https://github.com/neyric/pipes2js/issues"
+  },
+  "homepage": "https://github.com/neyric/pipes2js",
+  "_id": "pipes2js@0.0.1",
+  "_shasum": "e8f6eb0a91ecb8a1b991ace5fdff8968abf2fcf4",
+  "_from": "pipes2js@*",
+  "_npmVersion": "2.7.4",
+  "_nodeVersion": "0.12.2",
+  "_npmUser": {
+    "name": "neyric",
+    "email": "eric.abouaf@gmail.com"
+  },
+  "dist": {
+    "shasum": "e8f6eb0a91ecb8a1b991ace5fdff8968abf2fcf4",
+    "tarball": "http://registry.npmjs.org/pipes2js/-/pipes2js-0.0.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "neyric",
+      "email": "eric.abouaf@gmail.com"
+    }
+  ],
+  "_resolved": "https://registry.npmjs.org/pipes2js/-/pipes2js-0.0.1.tgz"
+}

@@ -1,0 +1,8 @@
+{
+   "name": "762b6ad467dfcb675fd6ffa080581692.json",
+   "main": "./run.js",
+   "version": "0.0.1",
+   "dependencies": {
+      "pipes2js": "0.0.1"
+   }
+}

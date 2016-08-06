@@ -1,0 +1,78 @@
+.. figure:: http://i.imgur.com/AlmKP2q.png
+   :alt: Logo
+
+   Logo
+
+lambda-packages
+===============
+
+|Build Status| |PyPI| |Slack|
+
+Various popular libraries, pre-compiled to be compatible with AWS
+Lambda.
+
+Currently includes support for:
+
+-  MySQL-Python
+-  numpy
+-  OpenCV
+-  psycopg2
+-  Pillow (PIL)
+-  LXML
+-  PyCrypto
+-  PyNaCl
+-  cryptography
+-  cffi
+
+This project is intended for use by
+`Zappa <https://github.com/Miserlou/Zappa>`__, but could also be used by
+any Python/Lambda project.
+
+Installation
+------------
+
+::
+
+    pip install lambda-packages
+
+Usage
+-----
+
+To use the packages with your projects, put the contents of the .tar.gz
+archive into your lambda .zip.
+
+**lambda-packages** also includes a manifest with information about the
+included packages and the paths to their binaries.
+
+.. code:: python
+
+    from lambda_packages import lambda_packages
+
+    print lambda_packages['psycopg2']['version'] 
+    # 2.6.1
+    print lambda_packages['psycopg2']['path'] 
+    # /home/YourUsername/.venvs/lambda_packages/psycopg2/psycopg2-2.6.1.tar.gz
+
+Contributing
+------------
+
+To add support for more packages, send a pull request containing a
+gzipped tarball of the package (build on Amazon Linux and tested on AWS
+Lambda) in the appropriate directory, an updated manifest, and
+deterministic build instructions for creating the archive.
+
+Useful targets include:
+
+-  MongoEngine
+-  pandas
+-  scipy
+-  `scikit-learn <https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/>`__
+
+.. |Build Status| image:: https://travis-ci.org/Miserlou/lambda-packages.svg
+   :target: https://travis-ci.org/Miserlou/lambda-packages
+.. |PyPI| image:: https://img.shields.io/pypi/v/lambda-packages.svg
+   :target: https://pypi.python.org/pypi/lambda-packages
+.. |Slack| image:: https://img.shields.io/badge/chat-slack-ff69b4.svg
+   :target: https://slackautoinviter.herokuapp.com/
+
+

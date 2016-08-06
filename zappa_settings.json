@@ -1,0 +1,7 @@
+{
+    "dev": {
+        "app_function": "app.app", 
+        "s3_bucket": "lmbda"
+        "delete_zip": false 
+    }
+}
